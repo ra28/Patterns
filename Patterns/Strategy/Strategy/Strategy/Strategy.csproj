@@ -42,11 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavior\FlyNoWay.cs" />
+    <Compile Include="Behavior\FlyRockedPowered.cs" />
+    <Compile Include="Behavior\FlyWithWings.cs" />
+    <Compile Include="Behavior\MuteQuack.cs" />
+    <Compile Include="Behavior\Quack.cs" />
+    <Compile Include="Behavior\Squeak.cs" />
+    <Compile Include="Duck.cs" />
+    <Compile Include="Ducks\MillardDuck.cs" />
+    <Compile Include="Ducks\ModelDuck.cs" />
+    <Compile Include="IBehavior\IFlyBehavior.cs" />
+    <Compile Include="IBehavior\IQuackBehavior.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

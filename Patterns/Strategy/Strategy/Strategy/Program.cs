@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Strategy.Behavior;
+using Strategy.Ducks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Duck millardDuck = new MillardDuck();
+            millardDuck.PerformFly();
+            millardDuck.PerformQuack();
+
+            Duck modelDuck = new ModelDuck();
+            modelDuck.PerformFly();
+            modelDuck.SetFlyBehavior(new FlyRocketPowered());
+            modelDuck.PerformFly();
+
+            Console.ReadLine();
         }
     }
 }
